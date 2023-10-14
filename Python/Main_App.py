@@ -11,9 +11,9 @@ GlobalInfo = {
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ #
 
-"""
-    Tkinter Functions
-"""
+
+#  Tkinter Functions
+
 
 def browseFiles():
     filename = filedialog.askopenfilename(initialdir = "/",
@@ -63,7 +63,7 @@ labelRequest2.pack()
 labelRequest3 = tk.Label(root, font=BahnSemiBold, bg='#2e2e2e', fg="white", text="Your UserID Can be found in your URL at 'vrchat.com'.\nYour AvatarID can be found in the VRC Avatar Descriptor Component in Unity.")
 labelRequest3.pack()
 
-label_file_explorer = tk.Entry(root, 
+label_file_explorer = tk.Label(root, 
                             text = "File Explorer using Tkinter",
                             width = 100,
                             fg = "blue")
@@ -76,7 +76,7 @@ button_explore = tk.Button(root,
 button_explore.pack()
 
 # Define a function to be called when the button is clicked
-def on_button_click():
+def on_Submit_File():   
     label.config(text="Button Clicked!")
 
 # Start the main event loop
