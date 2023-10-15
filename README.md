@@ -13,4 +13,4 @@ Known Issues:
 
 
 Solutions:
-    1 ~ Currently no found solutiosn at this time. Manual Admin fixes include allowing the file sthrough your Window's Defender Wall.
+    1 ~ Currently no found solutions at this time. Manual Admin fixes include allowing the file sthrough your Window's Defender Wall. Possible Solution includes paying for a Code Signing Certificate to bypass                  AntiVirus Reads.
