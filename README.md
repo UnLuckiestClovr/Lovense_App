@@ -16,7 +16,7 @@ Current Games:
             + On a 5 = an activation of 10 to 50% power for 2 to 8 seconds.
             + On a 10 = an activation of 50 to 100% power for 2 to 8 seconds.
 
-
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 Known Issues:
@@ -24,4 +24,4 @@ Known Issues:
 
 
 Solutions:
-    1 ~ Currently no found solutions at this time. Manual Admin fixes include allowing the file sthrough your Window's Defender Wall. Possible Solution includes paying for a Code Signing Certificate to bypass                  AntiVirus Reads.
+    1 ~ Currently no found solutions at this time. Manual Admin fixes include allowing the files through your Window's Defender Wall. Possible Solution includes paying for a Code Signing Certificate to bypass AntiVirus Reads.
