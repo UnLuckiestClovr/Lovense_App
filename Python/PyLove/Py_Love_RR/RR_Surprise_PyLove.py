@@ -16,28 +16,26 @@ print()
 # Lovense Info Grabbing
 
 while True:
-        print()
-        print("Input your Phone's Local API shown in the Lovense App: ")
-        domain = input(">>> ")
+    print()
+    print("Input your Phone's Local API shown in the Lovense App: ")
+    domain = input(">>> ")
 
-        print("Input the Http Port shown on the Application.")
-        httpPort = input(">>> ")
+    print("\nInput the Http Port shown on the Application.")
+    httpPort = input(">>> ")
 
-        api_url = f"http://{domain}:{httpPort}/command"
-        print(api_url)
+    api_url = f"http://{domain}:{httpPort}/command"
+    print(api_url)
 
-        if (domain != "" and httpPort != ""):
-            print(f"IP: {domain}\nHttp: {httpPort}")
-            confirm = input("^ ^ ^ Does this look Correct? Y/N >>> ")
+    if (domain != "" and httpPort != ""):
+        print(f"\n\nIP: {domain}\nHttp: {httpPort}")
+        confirm = input("\n\n^ ^ ^ Does this look Correct? Y/N >>> ")
 
-            if(confirm.capitalize() == "Y"):
-                break
-        else:
-            print("Invalid Input, values cannot be Empty.")
+        if(confirm.capitalize() == "Y"):
+            break
+    else:
+        print("Invalid Input, values cannot be Empty.")
 
-while True:
-
-    def randomSurpriseHandler():
+def randomSurpriseHandler():
         global running
         global start
 
@@ -90,22 +88,25 @@ while True:
 
         print("Randomization cycle stopped.")
 
+def Surprise_Random(Strength: int, timesec: int):
+    toyCommand = {
+        "command": "Pattern",
+        "rule": "V:1;F:v,r,p,f,s,t;S:200#",
+        "strength": f"{Strength}",
+        "timeSec": timesec,
+        "apiVer": 2
+    }
 
-    def Surprise_Random(Strength: int, timesec: int):
-        toyCommand = {
-            "command": "Pattern",
-            "rule": "V:1;F:v,r,p,f,s,t;S:200#",
-            "strength": f"{Strength}",
-            "timeSec": timesec,
-            "apiVer": 2
-        }
+    response = requests.post(api_url, json=toyCommand)
+    print(response.json())
 
-        response = requests.post(api_url, json=toyCommand)
-        print(response.json())
+    response.status_code
 
-        response.status_code
 
-    surprise_thread = threading.Thread(target=randomSurpriseHandler)
+# Handle Game Functions Below # 
+
+while True:
+    surprise_thread = threading.Thread(target=randomSurpriseHandler())
     surprise_thread.start()
 
     while not start:
@@ -120,4 +121,8 @@ while True:
     restart = input(">>> ")
     restart = restart.capitalize()
     if(restart == "E" or restart == "QUIT"):
+        print("\n\n\n\n\n\n\n\n\n")
         break
+    else:
+        print("restarting app. . .")
+        running = True
