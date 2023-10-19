@@ -6,7 +6,7 @@ Goals:
     Make a Locally run Python executable Application implementing easy-to-use GUI.
     Use an automatic persistence setting that locally saves data onto your PC without the need to worry about re-applying setting changes over time.
 
-
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 Current Games:
     
