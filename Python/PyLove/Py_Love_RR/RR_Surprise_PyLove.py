@@ -23,8 +23,8 @@ print("Welcome to PyLove! To get started Connect your Phone and Computer to the 
 print("Then go into your Lovense Remote App and go to Settings>Game Mode. Connect your toy(s), then you will find the needed info there.")
 print()
 
-# Lovense Info Grabbing
 
+# V V V  PyLove Surprise Code  V V V
 def pyLove_Surprise():
     global running
     global start
@@ -117,7 +117,6 @@ def surp_GameHandler(intervalSec : int):
 
     print("Randomization cycle stopped.")
 
-
 def Surprise_Random(Strength: int, timesec: int):
     global api_url
     toyCommand = {
@@ -132,8 +131,10 @@ def Surprise_Random(Strength: int, timesec: int):
     print(response.json())
 
     response.status_code
+# ______________________________________________________________
 
 
+# ____MAIN MENU______________________________________________________________________________________________________________________________________________
 def main():
     global api_url
 
