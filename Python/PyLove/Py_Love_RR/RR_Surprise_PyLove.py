@@ -32,20 +32,21 @@ def pyLove_Surprise():
     while True:
         print("\n\nInput how many seconds will occur between")
         intervalSec = int(input())
-        print(f"You Have selected {intervalSec} seconds.")
+        print(f"You Have selected {intervalSec} seconds.\n")
 
-        if isinstance(intervalSec, int):
+        if isinstance(intervalSec, int) or intervalSec >= 0:
             break
         else:
-            print("Invalid Input")
+            print("Invalid Input: Input Must be a Number [0 or Greater]")
 
     while True:
         if not start:
             print("Press Enter to start the randomization cycle.")
             input()
+            running = True
             start = True
 
-        surprise_thread = threading.Thread(target=surp_GameHandler(intervalSec))
+        surprise_thread = threading.Thread(target=lambda: surp_GameHandler(intervalSec))
         surprise_thread.start()
 
         print("Press Esc to stop the randomization cycle.")
@@ -64,6 +65,7 @@ def pyLove_Surprise():
 
         if restart=="N":
             print("\n\n\n\n\n\n\n\n\n")
+            start = False
             break
         else:
             print("Restarting app. . .")
@@ -72,6 +74,8 @@ def pyLove_Surprise():
 
 def surp_GameHandler(intervalSec : int):
     global running
+
+    running = True
 
     while running:
             if not running:
@@ -153,10 +157,9 @@ def main():
         else:
             print("Invalid Input, values cannot be Empty.")
 
-    notClosed = True
-    while notClosed:
+    while True:
         
-        print("Which Game would you like to Play?\n 1 : Surprise! \nQUIT : Close PyLove")
+        print("Which Game would you like to Play?\n\n1 : Surprise! \nQUIT : Close PyLove\n\n")
         gameOption = input(">>> ")
         gameOption = gameOption
 
