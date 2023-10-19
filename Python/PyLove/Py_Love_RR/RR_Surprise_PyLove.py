@@ -67,7 +67,7 @@ def randomSurpriseHandler():
             rand_time = random.randint(2, 8)
             print(f"Duration: {rand_time} seconds")
 
-            RussianRoulette(random_number, rand_time)
+            Surprise_Random(random_number, rand_time)
         elif randRoulette == 10:
             # Randomizes Activation Strength
             random_number = random.randint(10, 20)
@@ -77,7 +77,7 @@ def randomSurpriseHandler():
             rand_time = random.randint(2, 8)
             print(f"Duration: {rand_time} seconds")
 
-            RussianRoulette(random_number, rand_time)
+            Surprise_Random(random_number, rand_time)
         else:
             print('You got Lucky this time.')
         print()
@@ -90,7 +90,7 @@ def randomSurpriseHandler():
     print("Randomization cycle stopped.")
 
 
-def RussianRoulette(Strength: int, timesec: int):
+def Surprise_Random(Strength: int, timesec: int):
     toyCommand = {
         "command": "Pattern",
         "rule": "V:1;F:v,r,p,f,s,t;S:200#",

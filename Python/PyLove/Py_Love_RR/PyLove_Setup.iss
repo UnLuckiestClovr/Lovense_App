@@ -3,8 +3,10 @@
 
 [Setup]
 AppName=RR_Surprise_PyLove
-AppVersion=1.0
+AppVersion=1.
+ChangesEnvironment=yes
 DefaultDirName={pf}\RR_Surprise_PyLove
+DefaultGroupName=RR_Surprise_PyLove
 OutputDir=Output
 OutputBaseFilename=RR_Surprise_PyLoveInstaller
 Compression=lzma2/ultra
@@ -14,6 +16,6 @@ SolidCompression=yes
 Source: "dist\RR_Surprise_PyLove\*"; DestDir: "{app}"; Flags: recursesubdirs
 
 [Icons]
-Name: "{group}\RR_Surprise_PyLove"; Filename: "{app}\RR_Surprise_PyLove.exe"
-Name: "{commondesktop}\RR_Surprise_PyLove"; Filename: "{app}\RR_Surprise_PyLove.exe"; Flags: createonlyiffileexists 
+Name: "{group}\RR_Surprise_PyLove"; Filename: "{app}\RR_Surprise_PyLove.exe"; IconFilename: "{app}\YourAppIcon.ico"
+Name: "{commondesktop}\RR_Surprise_PyLove"; Filename: "{app}\RR_Surprise_PyLove.exe"
 
