@@ -8,6 +8,15 @@ Goals:
 
 
 
+Current Games:
+    Surprise!
+        ~ You input a Value you want as a time interval, it counts that many seconds between each avtivation then runs a random number between 1 through 10.
+            + 5 = an activation of 10 to 50% power for 2 to 8 seconds.
+            + 10 = an activation of 50 to 100% power for 2 to 8 seconds.
+
+
+
+
 Known Issues:
     1 ~ PyInstaller, which is used to allow Users to read Python code without an Interpreter uses a couple file script named "Win32/Wacatac.C" and "Bearfoos.A" to do this.
 
